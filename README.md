@@ -9,7 +9,7 @@ Hi, I'm Zenn. I'm a software developer and a self-taught programmer. I'm passion
 ### Project 1
 - Description: An Android app that helps children learn English preschool vocabulary.
 - Technologies: Android Studio, Java, XML, Firebase
-- Link: [English Preschool Vocabulary App](https://github.com/zihwoi/project1)
+- Link: [Project 1 Repository](#)
 
 ### Project 2
 - Description: A short description of the project.
