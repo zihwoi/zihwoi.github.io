@@ -29,5 +29,4 @@ Hi, I'm Zenn. I'm a software developer and a self-taught programmer. I'm passion
 
 ## Contact
 - Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile](#)
-- Twitter: [Your Twitter Profile](#)
+- Twitter: [Your Twitter Profile](#https://x.com/zihwoi)
