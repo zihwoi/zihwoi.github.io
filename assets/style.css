@@ -15,17 +15,20 @@ header {
 
 /* Center the ASCII art with refined settings */
 pre {
-    font-size: 14px; /* Size of ASCII art */
+    font-size: 14px; /* Adjust size as needed */
     line-height: 1.2; /* Improve spacing for ASCII art */
-    color: #00796b; /* Teal color for ASCII art */
+    color: #00796b; /* Choose a color that contrasts well */
     text-align: center; /* Center the ASCII art */
-    margin: 0 auto; /* Center it within its container */
+    margin: 20px auto; /* Center it within its container */
     white-space: pre; /* Preserve formatting without wrapping */
     max-width: 100%; /* Ensure it doesn't exceed the width of the container */
     display: block; /* Ensure it behaves like a block element */
-    padding: 0 20px; /* Add some padding for aesthetics */
+    padding: 20px; /* Add some padding for aesthetics */
     box-sizing: border-box; /* Ensure padding is included in width */
+    overflow: auto; /* Allows scrolling if it exceeds the width */
+    min-width: 250px; /* Set a minimum width to avoid wrapping */
 }
+
 
 main {
     max-width: 800px; /* Limit the width of the main content */
