@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'media', 
+  darkMode: 'media',  
   theme: {
     extend: {
       fontFamily: {
@@ -11,12 +11,12 @@ module.exports = {
         heading: ['Montserrat', 'sans-serif'], // Keep Montserrat for headings
       },
       colors: {
-        warmBg: "#FFF5E1",
-        warmDarkBg: "#3E2723",
-        warmText: "#5C3D2E",
-        warmLightText: "#FDEBD3",
-        warmAccent: "#FF8E72",
-        warmHover: "#FF9770",
+        mainBg: "#F5F1E3", // Softer Cream
+        softBg: "#E3D5C1", // Toasted Almond (Better contrast for cards)
+        accent: "#5C2E13", // Rustic Umber (Stronger heading contrast)
+        textPrimary: "#2E1B0F", // Dark Espresso (High readability for body text)
+        textSecondary: "#705438", // Burnt Caramel (Better for tags/smaller text)
+        secondaryBg: "#3C2415", // Dark Chestnut (Good balance for deep sections)
       },
     },
   },

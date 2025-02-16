@@ -6,6 +6,7 @@
 body {
   margin: 0;
   @apply font-sans; /* Now uses Lora */
+  @apply bg-mainBg text-accent;
 }
 
 code {
