@@ -1,5 +1,5 @@
 // src/pages/Home.js
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -19,13 +19,43 @@ const projects = [
 ];
 
 function Home() {
+  // Ball state (position)
+  const [position, setPosition] = useState({ x: 100, y: 100 });
+
+  // Function to move ball when clicked
+  const bounceBall = () => {
+    const newX = Math.random() * window.innerWidth - 50;
+    const newY = Math.random() * window.innerHeight - 50;
+    setPosition({ x: newX, y: newY });
+  };
+
   return (
     <motion.div
-      className="max-w-4xl mx-auto p-6 bg-mainBg text-textPrimary min-h-screen"
+      className="relative max-w-4xl mx-auto p-6 bg-mainBg text-textPrimary min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      {/* Bouncing Ball */}
+      <motion.div
+        className="w-10 h-10 bg-accent rounded-full fixed cursor-pointer"
+        style={{
+          top: position.y,
+          left: position.x,
+          position: "fixed",
+        }}
+        animate={{
+          x: position.x,
+          y: position.y,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 10,
+        }}
+        onClick={bounceBall}
+      />
+
       {/* Hero Section */}
       <motion.h1
         className="text-5xl font-bold text-accent mb-6 text-center"
