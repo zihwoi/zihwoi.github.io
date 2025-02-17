@@ -8,13 +8,13 @@ const projects = [
     id: "cutepixo",
     title: "Cutepixo",
     description: "A fun pixel art project.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: ["JavaScript", "HTML", "CSS"],
   },
   {
     id: "project-2",
     title: "Project 2",
-    description: "A different cool project.",
-    technologies: ["TypeScript", "Express", "PostgreSQL"],
+    description: "Building a store with Django.",
+    technologies: ["Django", "Stripe", "Python"],
   },
 ];
 

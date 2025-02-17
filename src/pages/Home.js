@@ -26,7 +26,7 @@ const projects = [
     description: "A fun pixel art project.",
   },
   {
-    id: "fyuto",
+    id: "project-2",
     title: "Fyuto Store",
     description: "Building a store with Django.",
   },

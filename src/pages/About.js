@@ -9,18 +9,19 @@ function About() {
       </h2>
       <div className="bg-softBg p-6 rounded-lg shadow-md">
         <p className="mb-4">
-          i'm a software developer learning to build new things and enjoy the world.
+          i'm a software developer learning to build websites and enjoy the world.
         </p>
         <p className="mb-4 font-semibold">
-          what am i learning:
+          what i am learning:
         </p>
         <ul className="list-disc list-inside mb-4 text-secondaryBg">
           <li>React.js</li>
-          <li>JavaScript/TypeScript</li>
+          <li>JavaScript</li>
           <li>Node.js</li>
           <li>Tailwind CSS</li>
-          <li>Painting</li>
-          <li>Videography</li>
+          <li>MYSQL</li>
+          <li>Python</li>
+          <li>MongoDB and Postman</li>
         </ul>
       </div>
     </div>
