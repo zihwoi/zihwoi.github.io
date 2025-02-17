@@ -48,39 +48,37 @@ function Projects() {
       {/* Project Cards Grid */}
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="bg-softBg p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3 className="text-xl font-bold text-accent mb-2">
-              {project.title}
-            </h3>
-            <p className="text-secondaryBg mb-4">{project.description}</p>
-
-            {/* Tech Stack Badges */}
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech, i) => (
-                <motion.span
-                  key={i}
-                  className="bg-secondaryBg text-softBg px-2 py-1 rounded text-sm"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 + i * 0.1 }}
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </div>
-
-            {/* View Details Link */}
-            <Link
-              to={`/projects/${project.id}`}
-              className="text-accent hover:text-secondaryBg mt-4 block"
+          <Link to={`/projects/${project.id}`} key={project.id} className="block">
+            <motion.div
+              className="bg-softBg p-4 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+              whileHover={{ scale: 1.05 }}
             >
-              View Details →
-            </Link>
-          </motion.div>
+              <h3 className="text-xl font-bold text-accent mb-2">
+                {project.title}
+              </h3>
+              <p className="text-secondaryBg mb-4">{project.description}</p>
+
+              {/* Tech Stack Badges */}
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, i) => (
+                  <motion.span
+                    key={i}
+                    className="bg-secondaryBg text-softBg px-2 py-1 rounded text-sm"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 + i * 0.1 }}
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* View Details Link (Can Remove If Not Needed) */}
+              <p className="text-accent hover:text-secondaryBg mt-4 block">
+                View Details →
+              </p>
+            </motion.div>
+          </Link>
         ))}
       </div>
     </motion.div>
