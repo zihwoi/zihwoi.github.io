@@ -5,5 +5,5 @@ npm run start
 npm run build
 
 npm run deploy
--main
--gh-pages
+*main
+*gh-pages
