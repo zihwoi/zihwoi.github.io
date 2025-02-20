@@ -1,10 +1,13 @@
+// src/pages/ProjectDetail.jsx
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import projectsData from "../data"; // Importing centralized data
+import { getProjectById } from "../data/projects.ts";  // Remove the .ts extension
+
+
 
 function ProjectDetail() {
   const { projectId } = useParams();
-  const project = projectsData[projectId];
+  const project = getProjectById(projectId);
 
   if (!project) {
     return (
@@ -37,7 +40,6 @@ function ProjectDetail() {
         ))}
       </ul>
 
-      {/* Project Link Button */}
       {project.link && (
         <div className="text-center mb-6">
           <a

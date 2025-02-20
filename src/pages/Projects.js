@@ -1,28 +1,10 @@
 // src/pages/Projects.js
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ProjectCard } from "../components/projects/ProjectCard";
+import { projects } from "../data/projects.ts";
 
-const projects = [
-  {
-    id: "cutepixo",
-    title: "Cutepixo",
-    description: "A fun pixel art project.",
-    technologies: ["JavaScript", "HTML", "CSS"],
-  },
-  {
-    id: "project-2",
-    title: "Project 2",
-    description: "Building a store with Django.",
-    technologies: ["Django", "Stripe", "Python"],
-  },
-  {
-    id: "sanzen",
-    title: "Sanzen",
-    description: "Building a simple financial app with React.js.",
-    technologies: ["React.js", "Recharts", "Python"],
-  },
-];
+
 
 function Projects() {
   return (
@@ -32,7 +14,6 @@ function Projects() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Animated Title */}
       <motion.h1
         className="text-5xl font-bold text-accent mb-6 text-center"
         initial={{ y: -50, opacity: 0 }}
@@ -51,40 +32,9 @@ function Projects() {
         here are some of my featured projects!
       </motion.p>
 
-      {/* Project Cards Grid */}
       <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project, index) => (
-          <Link to={`/projects/${project.id}`} key={project.id} className="block">
-            <motion.div
-              className="bg-softBg p-4 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-            >
-              <h3 className="text-xl font-bold text-accent mb-2">
-                {project.title}
-              </h3>
-              <p className="text-secondaryBg mb-4">{project.description}</p>
-
-              {/* Tech Stack Badges */}
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, i) => (
-                  <motion.span
-                    key={i}
-                    className="bg-secondaryBg text-softBg px-2 py-1 rounded text-sm"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 + i * 0.1 }}
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
-              </div>
-
-              {/* View Details Link (Can Remove If Not Needed) */}
-              <p className="text-accent hover:text-secondaryBg mt-4 block">
-                View Details →
-              </p>
-            </motion.div>
-          </Link>
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </motion.div>
