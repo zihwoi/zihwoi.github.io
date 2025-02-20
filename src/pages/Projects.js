@@ -16,6 +16,12 @@ const projects = [
     description: "Building a store with Django.",
     technologies: ["Django", "Stripe", "Python"],
   },
+  {
+    id: "sanzen",
+    title: "Sanzen",
+    description: "Building a simple financial app with React.js.",
+    technologies: ["React.js", "Recharts", "Python"],
+  },
 ];
 
 function Projects() {
