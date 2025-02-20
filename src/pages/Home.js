@@ -2,22 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-// Reusable ASCII Screen Art
-const asciiScreen = (title) => {
-  // Store the art in a template literal with consistent indentation
-  const art = `
-　∧ ∧
- (ﾟーﾟ*)
- (|　　つ
-～（＿つ
-　し'
-`;
-  // Combine title and art with proper spacing
-  return `
-${title}
-${art}`;
-};
+import AsciiScreen from "../components/AsciiScreen";
 
 const projects = [
   {
@@ -98,9 +83,7 @@ function Home() {
             className="bg-softBg p-4 rounded-lg shadow-md hover:scale-105 transition-transform flex flex-col items-center justify-center"
             whileHover={{ scale: 1.05 }}
           >
-            <pre className="text-xs font-mono leading-tight text-center whitespace-pre-wrap">
-              {asciiScreen(project.title)}
-            </pre>
+             <AsciiScreen title={project.title} /> {/* Use reusable component */}
             <h3 className="text-xl font-bold text-accent mt-3">{project.title}</h3>
             <p className="text-textPrimary mb-2">{project.description}</p>
             <Link
