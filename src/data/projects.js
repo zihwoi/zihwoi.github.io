@@ -1,10 +1,8 @@
-import { Project } from './types/project';
-
-export const projects: Project[] = [
+export const projects = [
   {
     id: "cutepixo",
     title: "Cutepixo",
-    description: "A fun pixel art project that uses JavaScript and HTML.",
+    description: "A fun pixel art project with JavaScript.",
     details: `
         Cutepixo is a pixel art generator built with JavaScript.
         It allows users to create, save, and share pixel artworks.
@@ -46,8 +44,8 @@ export const projects: Project[] = [
     title: "Sanzen",
     description: "A personal finance app with visualizations",
     details: `
-           Sanzen lets user to check their personal finance progress and calculate budgets and savings.
-           This project uses python libraries for its visuals.
+           Sanzen lets users check their personal finance progress and calculate budgets and savings.
+           This project uses Python libraries for its visuals.
         `,
     technologies: ["JavaScript", "React", "Python"],
     link: "https://zihwoi.github.io/sanzen/",
@@ -61,12 +59,8 @@ export const projects: Project[] = [
     category: "web",
     date: "2024-02"
   },
-
-
 ];
 
-export const getProjectById = (id: string): Project | undefined => {
+export const getProjectById = (id) => {
   return projects.find(project => project.id === id);
 };
-
-

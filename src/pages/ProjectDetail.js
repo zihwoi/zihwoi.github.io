@@ -1,7 +1,7 @@
 // src/pages/ProjectDetail.jsx
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { getProjectById } from "../data/projects.ts";  // Remove the .ts extension
+import { getProjectById } from "../data/projects";  // Remove the .ts extension
 
 
 
