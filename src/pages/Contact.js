@@ -6,7 +6,7 @@ function Contact() {
   return (
     <MotionWrapper>
       <h2 className="text-4xl font-bold text-accent text-center mb-6">
-        find me on:
+      ❅ find me on:
       </h2>
       <div className="bg-softBg p-6 rounded-lg shadow-md w-full max-w-md text-center">
         <p className="mb-4 text-lg font-medium">my links:</p>
